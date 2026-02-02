@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: rgb(135, 206, 235); /* השמיים שהגדרת */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: grid;
+    /* הגדרת 19 עמודות ושורות בדיוק כפי שעשית */
+    grid-template-columns: repeat(19, 1fr);
+    grid-template-rows: repeat(19, 1fr);
+    
+    width: 100vw;
+    height: 100vh;
+    /* border: 1px solid black; <-- אפשר להשאיר לבדיקה */
+}
+
+/* עיצוב כללי לכל בלוק שייווצר */
+.block {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    image-rendering: pixelated; /* שומר על מראה הפיקסלים של Minecraft */
+}
+
+/* מחלקות לסוגי הבלוקים */
+.sky { background-color: transparent; }
+.grass { background-image: url('./img/grass.png'); background-color: #5aa35a; }
+.dirt { background-image: url('./img/dirt.png'); background-color: #8b5a2b; }
+.stone { background-image: url('./img/stone.png'); background-color: #808080; }
